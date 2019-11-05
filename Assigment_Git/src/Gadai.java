@@ -35,23 +35,23 @@ public class Gadai {
 		this.price=price;
 	}
 	
-	public getId (){
+	public int getId (){
 		return id;
 	}
 	
-	public getNama (){
+	public String getNama (){
 		return nama;
 	}
 	
-	public getCategory (){
+	public String getCategory (){
 		return category;
 	}
 	
-	public getDescription (){
+	public String getDescription (){
 		return description;
 	}
 	
-	public getPrice (){
+	public int getPrice (){
 		return price;
 	}
 	
