@@ -44,5 +44,4 @@ public class Inventory {
 		this.description = description;
 	}
 	
-	System.out.println("3. Tampilkan Inventory");
 }
