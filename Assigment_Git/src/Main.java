@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
 	static int opsi = 0;
 	static ArrayList<Gadai> gad = new ArrayList();
+	int idnum = 1;
 
 	public static void main(String[] args) {
 		
@@ -26,7 +27,6 @@ public class Main {
 			int price = 0;
 			try {
 				opsi = input.nextInt();
-				int i = 1;
 
 				// System.out.println("=============================================");
 
@@ -90,7 +90,7 @@ public class Main {
 						price = input.nextInt();
 						if (price % 10000 == 0) {
 							//stopContinue = true;
-							gad.add(new Gadai(i, nama, category, description, price,"Gadai",price,price));
+							gad.add(new Gadai(idnum, nama, category, description, price,"Gadai",price,price));
 							//gad.add(new Gadai(setId(), setNama(), setCategory(), setDescription(), setPrice()));
 							i++;
 						} else {
