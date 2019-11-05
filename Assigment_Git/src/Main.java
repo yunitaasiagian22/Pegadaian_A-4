@@ -10,13 +10,14 @@ public class Main {
 		System.out.println("3. Tampilkan Inventory");
 		System.out.println("4. Exit");
 		
-		opsi:{
-			Scanner input = new Scanner(System.in);
-			System.out.print("Masukkan pilihan: ");
-			String nama = "";
-			String category = "";
-			String description = "";
-			int price = 0;
+		//opsi:{
+		Scanner input = new Scanner(System.in);
+		System.out.print("Masukkan pilihan: ");
+		String nama = "";
+		String category = "";
+		String description = "";
+		
+		int price = 0;
 			
 			do{
 				try {	
@@ -35,17 +36,41 @@ public class Main {
 						 
 						 if (nama.length()<3 || nama.length()>15) {
 							 System.out.println("Nama should be 3 until 15!");
+							 System.out.println("Nama: ");
+							 nama = input.next();
 
 						 }
 						  
 						 System.out.println("Product category: ");
-						 category = input.next();
+						 category = input.next().toLowerCase();
+						 
+						 if (category != "motor" ||  category != "emas" || category != "laptop") {
+							 System.out.println("Category Not found!");
+							 System.out.println("Product category: ");
+							 category= input.next();
+
+						 }
+						 
 						 
 						 System.out.println("Description: ");
 						 description = input.next();
 						 
+						 boolean isTwo =cekWords(description);
+						 
+						 if(isTwo == false) {
+							 System.out.println("Description should have at least two words!");
+							 System.out.println("Description: ");
+							 description= input.next();
+						 }
+						 
 						 System.out.println("Price:" );
 						 price = input.nextInt();
+						 
+						 if(price%10000==1) {
+							 System.out.println("Harga harus kelipatan 10.000!");
+							 System.out.println("Pricen: ");
+							 price= input.nextInt();
+						 }
 						 
 						
 						
@@ -77,8 +102,24 @@ public class Main {
 				
 			}while (opsi ==0);
 		}
-
-	
-	}
-
+	private static boolean cekWords(String description) {
+		// TODO Auto-generated method stub
+		int count = 0;
+		while (count < 2) {
+	        String[] arrPhrase = description.split(" ");
+	        for (int i = 0; i < arrPhrase.length; i++) {
+	            if (arrPhrase[i].equals(" ")) {
+	            } else {
+	                count++;
+	                
+	                
+	            }
+	        }
+	    }
+		 if(count ==2) {
+         	return true;
+         }
+         return false;
+	}	
 }
+
