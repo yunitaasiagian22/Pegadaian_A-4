@@ -6,8 +6,8 @@ public class Gadai {
 	private String description;
 	private int price;
 	
-	Gadai(int id, String nama, String cateogory, String description, int price){
-		this.id;
+	Gadai(int id, String nama, String category, String description, int price){
+		this.id = id;
 		this.nama=nama;
 		this.category=category;
 		this.description=description;
@@ -32,7 +32,7 @@ public class Gadai {
 	}
 	
 	public void setPrice (int price){
-		this.price=price
+		this.price=price;
 	}
 	
 	public getId (){
