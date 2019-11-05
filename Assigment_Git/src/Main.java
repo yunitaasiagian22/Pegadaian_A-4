@@ -143,9 +143,9 @@ public class Main {
 					ArrayList<Gadai> objGadai = new ArrayList<>();
 					//objInventory.add(new Inventory (objInventory.getNama())));
 					
-					for(Gadai gad:objGadai){
-						if(gad.getStatus().equals("Gadai")){
-							System.out.println(gad.getId() + " \t|" + gad.getNama()+ " \t|" + gad.getCategory()+ " \t|" + gad.getDescription()+ " \t|" + gad.getPrice()+ "\t|");
+					for(Gadai gad1:gad){
+						if(gad1.getStatus().equals("Gadai")){
+							System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t|" + gad1.getDescription()+ " \t|" + gad1.getPrice()+ "\t|");
 						}
 					}
 					
