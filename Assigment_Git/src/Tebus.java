@@ -1,53 +1,62 @@
 
+
 public class Tebus {
+	private int id;
+	private String nama;
+	private String category;
+	private String description;
+	private int price;
 	
-	private int ID;
-	private String Product;
-	private int Price;
-	private String Status;
-	private int Utang;
-	private int HargaBayar;
+	Tebus (int id, String nama, String cateogory, String description, int price){
+		this.nama=nama;
+		this.category=category;
+		this.description=description;
+		this.price=price;
+	}
 	
-	public String getTebusInfo1(){
-		return "ID:  " + id + "\nProduct:  " + Product + "\nPrice:  " + price + "\nStatus: "+ status+"\nUtang: "+ utang+"\nHarga Bayar: "+ Bayar+"\n";
+	public void setId (int id){
+		this.id=id;		
 	}
-	public String getTebusInfo(){
-		return "ID:  " + id + "\nProduct:  " + Product + "\nPrice:  " + price + "\nStatus: "+ status+"\nUtang: "+ utang+"\nHarga Bayar: "+ Bayar+"\n";
+	
+	public void setNama (String nama) {
+		this.nama=nama;
 	}
-	public int getID() {
+	
+	public void setCategory (String category){
+		this.category=category;
+	}
+	
+	public void setDescription (String description) {
+		this.description=description;
+	}
+	
+	public void setPrice (int price){
+		this.price=price;
+	}
+	
+	public int getId (){
 		return id;
 	}
-	public void setID(int id) {
-		this.id = id;
+	
+	public String getNama (){
+		return nama;
 	}
-	public String Product() {
-		return Product;
+	
+	public String getCategory (){
+		return category;
 	}
-	public void setProduct(String Product) {
-		this.Product = Product;
+	
+	public String getDescription (){
+		return description;
 	}
-	public  int Price() {
-		return Price;
+	
+	public int getPrice (){
+		return price;
 	}
-	public void setPrice( int Price) {
-		this.Price = Price;
-	}
-	public String getStatus() {
-		return Status;
-	}
-	public void setStatus(String Status) {
-		this.Status = Status;
-	}
-	public  int Utang() {
-		return Utang;
-	}
-	public void setUtang( int Utang) {
-		this.Utang = Utang;
-	}
-	public  int HargaBayar() {
-		return HargaBayar;
-	}
-	public void setBayar( int Bayar) {
-		this.Bayar = Bayar;
+	
+	
+	
 	
 }
+
+
