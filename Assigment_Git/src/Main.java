@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 	static int opsi = 0;
 	static ArrayList<Gadai> gad = new ArrayList();
-	int idnum = 1;
+	static int idnum = 1;
 
 	public static void main(String[] args) {
 		
@@ -92,7 +92,7 @@ public class Main {
 							//stopContinue = true;
 							gad.add(new Gadai(idnum, nama, category, description, price,"Gadai",price,price));
 							//gad.add(new Gadai(setId(), setNama(), setCategory(), setDescription(), setPrice()));
-							i++;
+							idnum++;
 						} else {
 							System.out.println("Harga harus kelipatan 10.000!");
 						}
@@ -129,7 +129,7 @@ public class Main {
 					//objInventory.add(new Inventory (objInventory.getNama())));
 					
 					for(Gadai gad1:gad){
-						System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
+						System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
 						
 					}
 					
@@ -145,7 +145,7 @@ public class Main {
 					
 					for(Gadai gad1:gad){
 						if(gad1.getStatus().equals("Gadai")){
-							System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t|" + gad1.getDescription()+ " \t|" + gad1.getPrice()+ "\t|");
+							System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getDescription()+ " \t|" + gad1.getPrice()+ "\t|");
 						}
 					}
 					
