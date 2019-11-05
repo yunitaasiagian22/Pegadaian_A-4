@@ -1,62 +1,73 @@
 
-
 public class Tebus {
-	private int id;
-	private String nama;
-	private String category;
-	private String description;
-	private int price;
+	private int ID;
+	private String Product;
+	private int Price;
+	private String Status;
+	private int Utang;
+	private int HargaBayar;
 	
-	Tebus (int id, String nama, String cateogory, String description, int price){
-		this.nama=nama;
-		this.category=category;
-		this.description=description;
-		this.price=price;
+	
+	Tebus (int ID;
+	String Product;
+	int Price;
+	String Status;
+	int Utang;
+	int HargaBayar;
+	Tebus (int ID,
+	String Product,
+	int Price,
+	String Status,
+	int Utang,
+	int HargaBayar) {
+		super();
+			this.ID=ID;
+			this.Product=Product;
+			this.Price=Price;
+			this.Status=status;
+			this.Utang=Utang;
+			this.HargaBayar=HargaBayar;
+			}
+			
+	public String getTebusInfo1(){
+		return "ID:  " + id + "\nProduct:  " + Product + "\nPrice:  " + price + "\nStatus: "+ status+"\nUtang: "+ utang+"\nHarga Bayar: "+ Bayar+"\n";
+			}
+	public String getTebusInfo(){
+		return "ID:  " + id + "\nProduct:  " + Product + "\nPrice:  " + price + "\nStatus: "+ status+"\nUtang: "+ utang+"\nHarga Bayar: "+ Bayar+"\n";
+		public int getID() {
+			return id;
+		}
+		
+	public void setID(int id) {
+		this.id = id;
+			
+	public String Product() {
+	return Product;
+	public void setProduct(String Product) {
+		this.Product = Product;
+				
+	public  int Price() {
+	return Price;
+	public void setPrice( int Price) {
+		this.Price = Price;
+	public String getStatus() {
+	return Status;
+	public void setStatus(String Status) {
+	this.Status = Status;
+	public  int Utang() {
+	return Utang;
+	public void setUtang( int Utang) {
+	this.Utang = Utang;
+	public  int HargaBayar() {
+	return HargaBayar;
+	public void setBayar( int Bayar) {
+	this.Bayar = Bayar;
 	}
 	
-	public void setId (int id){
-		this.id=id;		
-	}
-	
-	public void setNama (String nama) {
-		this.nama=nama;
-	}
-	
-	public void setCategory (String category){
-		this.category=category;
-	}
-	
-	public void setDescription (String description) {
-		this.description=description;
-	}
-	
-	public void setPrice (int price){
-		this.price=price;
-	}
-	
-	public int getId (){
-		return id;
-	}
-	
-	public String getNama (){
-		return nama;
-	}
-	
-	public String getCategory (){
-		return category;
-	}
-	
-	public String getDescription (){
-		return description;
-	}
-	
-	public int getPrice (){
-		return price;
-	}
+	Scanner input = new Scanner(System.in); //input
+	System.out.println("Masukkan ID barang yang ingin di tebus: ");
+	int ID = input.nextInt() ;
+	System.out.println("Masukkan biaya yang ingin di bayarkan: ");
+	int HargaBayar = input.nextInt() ;
 	
 	
-	
-	
-}
-
-
