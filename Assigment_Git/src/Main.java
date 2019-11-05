@@ -130,8 +130,11 @@ public class Main {
 					//objInventory.add(new Inventory (objInventory.getNama())));
 					
 					for(Gadai gad1:gad){
+
 						System.out.format("|%7s||%12s||%12s||%12s||%12s|\n",gad1.getId(),gad1.getCategory(),gad1.getPrice(),gad1.getStatus(),gad1.getUtang());
 						//System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
+						//System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t\t|" + gad1.getPrice()+ "\t\t|" + gad1.getStatus()+ " \t\t|" + gad1.getUtang()+ " \t\t|");
+
 						
 					}
 					
@@ -151,6 +154,7 @@ public class Main {
 						if(gad1.getStatus().equals("Gadai")){
 							System.out.format("|%7s||%12s||%12s||%12s||%12s|\n",gad1.getId(),gad1.getNama(),gad1.getCategory(),gad1.getDescription(),gad1.getUtang());
 							//System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getDescription()+ " \t\t|" + gad1.getUtang()+ "\t|");
+							//System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t\t|" + gad1.getCategory()+ " \t\t\t|" + gad1.getDescription()+ " \t\t|" + gad1.getPrice()+ "\t\t|");
 						}
 					}
 					
