@@ -90,7 +90,8 @@ public class Main {
 						price = input.nextInt();
 						if (price % 10000 == 0) {
 							//stopContinue = true;
-							gad.add(new Gadai(i, nama, category, description, price));
+							gad.add(new Gadai(i, nama, category, description, price,"Gadai",price,price));
+							//gad.add(new Gadai(setId(), setNama(), setCategory(), setDescription(), setPrice()));
 							i++;
 						} else {
 							System.out.println("Harga harus kelipatan 10.000!");
@@ -106,17 +107,17 @@ public class Main {
 				       
 				    System.out.print("Masukan Biaya yang ingin ditebus : ");
 				    int hargaBayar = input.nextInt();
-				    ArrayList<Gadai> objGadai = new ArrayList<>();
-				    for (Gadai gad:objGadai){
-		            	if(gad.getId()==id){
-		            		gad.setUtang(gad.getUtang() - hargaBayar);
-		            		if (gad.getUtang() == 0){
-		            			gad.setStatus("Lunas");
-		            		} else if (gad.getUtang() <0){
-		            				gad.setStatus("Lunas");
+				    //ArrayList<Gadai> objGadai = new ArrayList<>();
+				    for (Gadai gad1:gad){
+		            	if(gad1.getId()==id){
+		            		gad1.setUtang(gad1.getUtang() - hargaBayar);
+		            		if (gad1.getUtang() == 0){
+		            			gad1.setStatus("Lunas");
+		            		} else if (gad1.getUtang() <0){
+		            				gad1.setStatus("Lunas");
 		            			}	
 		            		else{
-		            			gad.setStatus("Gadai")	;
+		            			gad1.setStatus("Gadai")	;
 		            		} 
 		            	}
 		            }
@@ -127,8 +128,8 @@ public class Main {
 					//ArrayList<Gadai> objGadai = new ArrayList<>();
 					//objInventory.add(new Inventory (objInventory.getNama())));
 					
-					for(Gadai gad:objGadai){
-						System.out.println(gad.getId() + " \t|" + gad.getCategory()+ " \t|" + gad.getPrice()+ "\t|" + gad.getStatus()+ " \t|" + gad.getUtang()+ " \t|");
+					for(Gadai gad1:gad){
+						System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
 						
 					}
 					
