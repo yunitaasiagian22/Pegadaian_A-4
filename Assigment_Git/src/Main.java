@@ -122,14 +122,16 @@ public class Main {
 		            	}
 		            }
 				    
-				    System.out.println("=============================================");
-					System.out.println("Id \t| Product \t| Price \t| Status \t| Utang");
-					System.out.println("=============================================");
+				    System.out.println("=======================================================================");
+				    System.out.format("|%7s||%12s||%12s||%12s||%12s|\n","ID","Product","Price","Status","Utang");
+				    //System.out.println("Id \t| Product \t| Price \t| Status \t| Utang");
+					System.out.println("======================================================================");
 					//ArrayList<Gadai> objGadai = new ArrayList<>();
 					//objInventory.add(new Inventory (objInventory.getNama())));
 					
 					for(Gadai gad1:gad){
-						System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
+						System.out.format("|%7s||%12s||%12s||%12s||%12s|\n",gad1.getId(),gad1.getCategory(),gad1.getPrice(),gad1.getStatus(),gad1.getUtang());
+						//System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
 						
 					}
 					
@@ -137,15 +139,18 @@ public class Main {
 
 				} else if (opsi == 3) {
 					//tampilkan inventory
-					System.out.println("Id \t| Nama \t| Product \t| Description \t| Price\t|");
-					System.out.println("=============================================");
+					//System.out.println("Id \t| Nama \t| Product \t| Description \t| Price\t|");
+					System.out.println("==========================================================================");
+					System.out.format("|%7s||%12s||%12s||%12s||%12s|\n","ID","Nama","Product","Description","Price");
+					System.out.println("==========================================================================");
 					//ArrayList<Inventory> objInventory = new ArrayList<>();
 					ArrayList<Gadai> objGadai = new ArrayList<>();
 					//objInventory.add(new Inventory (objInventory.getNama())));
 					
 					for(Gadai gad1:gad){
 						if(gad1.getStatus().equals("Gadai")){
-							System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getDescription()+ " \t|" + gad1.getPrice()+ "\t|");
+							System.out.format("|%7s||%12s||%12s||%12s||%12s|\n",gad1.getId(),gad1.getNama(),gad1.getCategory(),gad1.getDescription(),gad1.getUtang());
+							//System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getDescription()+ " \t\t|" + gad1.getUtang()+ "\t|");
 						}
 					}
 					
