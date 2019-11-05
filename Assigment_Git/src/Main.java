@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Main {
 	static int opsi = 0;
 	//static ArrayList<Gadai> gad = new ArrayList();
@@ -99,12 +100,54 @@ public class Main {
 
 
 				} else if (opsi == 2) {
+					//Scanner input = new Scanner(System.in); 
+					System.out.println(" Masukkan ID Barang yang ingin ditebus : ");
+				    int id= input.nextInt();
+				       
+				    System.out.print("Masukan Biaya yang ingin ditebus : ");
+				    int hargaBayar = input.nextInt();
+				    ArrayList<Gadai> objGadai = new ArrayList<>();
+				    for (Gadai gad:objGadai){
+		            	if(gad.getId()==id){
+		            		gad.setUtang(gad.getUtang() - hargaBayar);
+		            		if (gad.getUtang() == 0){
+		            			gad.setStatus("Lunas");
+		            		} else if (gad.getUtang() <0){
+		            				gad.setStatus("Lunas");
+		            			}	
+		            		else{
+		            			gad.setStatus("Gadai")	;
+		            		} 
+		            	}
+		            }
+				    
+				    System.out.println("=============================================");
 					System.out.println("Id \t| Product \t| Price \t| Status \t| Utang");
 					System.out.println("=============================================");
+					//ArrayList<Gadai> objGadai = new ArrayList<>();
+					//objInventory.add(new Inventory (objInventory.getNama())));
+					
+					for(Gadai gad:objGadai){
+						System.out.println(gad.getId() + " \t|" + gad.getCategory()+ " \t|" + gad.getPrice()+ "\t|" + gad.getStatus()+ " \t|" + gad.getUtang()+ " \t|");
+						
+					}
+					
+					
 
 				} else if (opsi == 3) {
-					System.out.println("Id \t| Nama \t| Product \\t| Description \t| Price\t|");
+					//tampilkan inventory
+					System.out.println("Id \t| Nama \t| Product \t| Description \t| Price\t|");
 					System.out.println("=============================================");
+					//ArrayList<Inventory> objInventory = new ArrayList<>();
+					ArrayList<Gadai> objGadai = new ArrayList<>();
+					//objInventory.add(new Inventory (objInventory.getNama())));
+					
+					for(Gadai gad:objGadai){
+						if(gad.getStatus().equals("Gadai")){
+							System.out.println(gad.getId() + " \t|" + gad.getNama()+ " \t|" + gad.getCategory()+ " \t|" + gad.getDescription()+ " \t|" + gad.getPrice()+ "\t|");
+						}
+					}
+					
 
 				} else if (opsi == 4) {
 					System.out.println("EXIT");

@@ -1,17 +1,24 @@
 
+
 public class Gadai {
 	private int id;
 	private String nama;
 	private String category;
 	private String description;
 	private int price;
+	private String status;
+	private int utang;
+	private int hargaBayar;
 	
-	Gadai(int id, String nama, String category, String description, int price){
+	Gadai(int id, String nama, String category, String description, int price, String status, int utang, int hargaBayar){
 		this.id = id;
 		this.nama=nama;
 		this.category=category;
 		this.description=description;
 		this.price=price;
+		this.status=status;
+		this.utang=utang;
+		this.hargaBayar=hargaBayar;
 	}
 	
 	
@@ -35,6 +42,18 @@ public class Gadai {
 		this.price=price;
 	}
 	
+	public void setStatus (String status) {
+		this.status=status;
+	}
+	
+	public void setUtang (int utang){
+		this.utang=utang;
+	}
+
+	public void setHargaBayar (int hargaBayar){
+		this.hargaBayar=hargaBayar;
+	}
+	
 	public int getId (){
 		return id;
 	}
@@ -55,13 +74,16 @@ public class Gadai {
 		return price;
 	}
 	
+	public String getStatus(){
+		return status;
+	}
 	
+	public int getUtang(){
+		return utang;
+	}
 	
-	
-	
-	
-	
-	
-	
+	public int getHargaBayar(){
+		return hargaBayar;
+	}
 
 }
