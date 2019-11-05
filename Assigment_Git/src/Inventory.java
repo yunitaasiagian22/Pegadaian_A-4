@@ -33,5 +33,16 @@ public class Inventory {
 	public String getProduct() {
 		return product;
 	
+	}
+	public void setProduct(String product) {
+		this.product = product;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 	
 }
