@@ -15,6 +15,9 @@ public class Inventory {
 		this.id=id;	
 	}
 	
+	public int getId (){
+		return id;
+	}
 	
 	
 	
