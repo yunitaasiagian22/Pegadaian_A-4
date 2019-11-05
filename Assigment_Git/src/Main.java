@@ -3,26 +3,26 @@ import java.util.Scanner;
 
 public class Main {
 	static int opsi = 0;
-	static ArrayList<Gadai> gad = new ArrayList();
+	//static ArrayList<Gadai> gad = new ArrayList();
 
 	public static void main(String[] args) {
-		System.out.println("PEGADAIAN SYSTEM");
-		System.out.println("===================");
-		System.out.println("1. Gadai");
-		System.out.println("2. Tebus");
-		System.out.println("3. Tampilkan Inventory");
-		System.out.println("4. Exit");
-
-		// opsi:{
-		Scanner input = new Scanner(System.in);
-		System.out.print("Masukkan pilihan: ");
-		String nama = "";
-		String category = "";
-		String description = "";
-
-		int price = 0;
-
+		
 		do {
+			System.out.println("PEGADAIAN SYSTEM");
+			System.out.println("===================");
+			System.out.println("1. Gadai");
+			System.out.println("2. Tebus");
+			System.out.println("3. Tampilkan Inventory");
+			System.out.println("4. Exit");
+
+			// opsi:{
+			Scanner input = new Scanner(System.in);
+			System.out.print("Masukkan pilihan: ");
+			String nama = "";
+			String category = "";
+			String description = "";
+
+			int price = 0;
 			try {
 				opsi = input.nextInt();
 				int i = 1;
@@ -35,51 +35,68 @@ public class Main {
 					System.out.println("Detail Information");
 					System.out.println("=============================================");
 
-					boolean stopContinue = false;
+					boolean valid1 = false;
 					
-					while (stopContinue = true) {
-						System.out.println("Nama: ");
-						nama = input.next();
-
+					do {
+						input.nextLine();
+						System.out.print("Nama :");
+						nama = input.nextLine();
+						
 						if (nama.length() >= 3 && nama.length() <= 15) {
-
-							System.out.println("Product category: ");
-							category = input.next();
-
-							if (category.equalsIgnoreCase("motor") || category.equalsIgnoreCase("emas")
-									|| category.equalsIgnoreCase("laptop")) {
-
-								System.out.println("Description: ");
-								description = input.next();
-
-								boolean isTwo = cekWords(description);
-
-								if (isTwo == true) {
-									
-									System.out.print("Price:\n");
-									price = input.nextInt();
-
-									if (price % 10000 == 1) {
-										System.out.println("Harga harus kelipatan 10.000!");
-										
-									} else
-										//valid = true
-									    stopContinue = false;
-										gad.add(new Gadai(i, nama, category, description, price));
-										i++;
-								} else
-								    System.out.println("Description should have at least two words");	
-							} else
-								System.out.println("Category Not found!");
-					
-						} else {
-							valid = true;
-							System.out.println("Nama should be 3 until 15!");
+							//gad.setNama(nama);
+							valid1 = true;
 						}
-
-					}
-
+					} while (!valid1);
 					
+					do {
+						//input.nextLine();
+						valid1 = false;
+						System.out.print("Category :");
+						category = input.nextLine();
+						
+						if (category.equalsIgnoreCase("motor") || category.equalsIgnoreCase("emas")
+								|| category.equalsIgnoreCase("laptop")) {
+							valid1 = true;
+							
+						}
+						else {
+							System.out.println("Category Not found!");
+						}
+							
+					} while (!valid1);
+					
+					do {
+						//input.nextLine();
+						valid1 = false;
+						System.out.print("Deskripsi :");
+						description = input.nextLine();
+						
+						boolean isTwo = cekWords(description);
+
+						if (isTwo == false) {
+							System.out.println("Description should have at least two words!");
+							valid1 = false;
+							// System.out.println("Description: ");
+							// description= input.nextLine();
+						} else
+							valid1 = true;
+							
+					} while (!valid1);
+					
+					do {
+						//input.nextLine();
+						System.out.print("Price :");
+						price = input.nextInt();
+						if (price % 10000 == 0) {
+							//stopContinue = true;
+							//gad.add(new Gadai(i, nama, category, description, price));
+							//i++;
+						} else {
+							System.out.println("Harga harus kelipatan 10.000!");
+						}
+					} while (price % 10000 > 0);
+
+
 
 				} else if (opsi == 2) {
 					System.out.println("Id \t| Product \t| Price \t| Status \t| Utang");
@@ -102,7 +119,12 @@ public class Main {
 				input.nextLine();
 			}
 
-		} while (opsi == 0);
+		} while (opsi >= 0 && opsi <=3);
+	}
+
+	private static void gadai() {
+		// TODO Auto-generated method stub
+
 	}
 
 	private static boolean cekWords(String description) {
