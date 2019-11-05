@@ -36,61 +36,50 @@ public class Main {
 					System.out.println("=============================================");
 
 					boolean stopContinue = false;
+					
 					while (stopContinue = true) {
 						System.out.println("Nama: ");
 						nama = input.next();
 
 						if (nama.length() >= 3 && nama.length() <= 15) {
 
-							// System.out.println("Nama: ");
-							// nama = input.next();
-							valid = true;
-							
-							
 							System.out.println("Product category: ");
 							category = input.next();
 
-							if (!category.equalsIgnoreCase("motor") && !category.equalsIgnoreCase("emas")
-									&& !category.equalsIgnoreCase("laptop")) {
+							if (category.equalsIgnoreCase("motor") || category.equalsIgnoreCase("emas")
+									|| category.equalsIgnoreCase("laptop")) {
+
+								System.out.println("Description: ");
+								description = input.next();
+
+								boolean isTwo = cekWords(description);
+
+								if (isTwo == true) {
+									
+									System.out.print("Price:\n");
+									price = input.nextInt();
+
+									if (price % 10000 == 1) {
+										System.out.println("Harga harus kelipatan 10.000!");
+										
+									} else
+										//valid = true
+									    stopContinue = false;
+										gad.add(new Gadai(i, nama, category, description, price));
+										i++;
+								} else
+								    System.out.println("Description should have at least two words");	
+							} else
 								System.out.println("Category Not found!");
-								// System.out.println("Product category: ");
-								// category= input.next();
-								valid = false;
-							} else
-								valid = true;
-
-							System.out.println("Description: ");
-							description = input.next();
-
-							boolean isTwo = cekWords(description);
-
-							if (isTwo == false) {
-								System.out.println("Description should have at least two words!");
-								valid = false;
-								// System.out.println("Description: ");
-								// description= input.nextLine();
-							} else
-								valid = true;
-
-							System.out.println("Price:");
-							price = input.nextInt();
-
-							if (price % 10000 == 1) {
-								System.out.println("Harga harus kelipatan 10.000!");
-								valid = false;
-								// System.out.println("Pricen: ");
-								// price= input.nextInt();
-							} else
-								valid = true;
+					
 						} else {
 							valid = true;
 							System.out.println("Nama should be 3 until 15!");
 						}
 
-					} // while (!valid);
+					}
 
-					gad.add(new Gadai(i, nama, category, description, price));
-					i++;
+					
 
 				} else if (opsi == 2) {
 					System.out.println("Id \t| Product \t| Price \t| Status \t| Utang");
@@ -114,11 +103,6 @@ public class Main {
 			}
 
 		} while (opsi == 0);
-	}
-
-	private static void gadai() {
-		// TODO Auto-generated method stub
-
 	}
 
 	private static boolean cekWords(String description) {
