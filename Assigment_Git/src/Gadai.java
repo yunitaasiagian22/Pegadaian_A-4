@@ -7,11 +7,13 @@ public class Gadai {
 	private int price;
 	
 	Gadai(int id, String nama, String cateogory, String description, int price){
+		this.id;
 		this.nama=nama;
 		this.category=category;
 		this.description=description;
 		this.price=price;
 	}
+	
 	
 	public void setId (int id){
 		this.id=id;		
