@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	static int opsi = 0;
-	//static ArrayList<Gadai> gad = new ArrayList();
+	static ArrayList<Gadai> gad = new ArrayList();
 
 	public static void main(String[] args) {
 		
@@ -90,8 +90,8 @@ public class Main {
 						price = input.nextInt();
 						if (price % 10000 == 0) {
 							//stopContinue = true;
-							//gad.add(new Gadai(i, nama, category, description, price));
-							//i++;
+							gad.add(new Gadai(i, nama, category, description, price));
+							i++;
 						} else {
 							System.out.println("Harga harus kelipatan 10.000!");
 						}
