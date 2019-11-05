@@ -4,21 +4,34 @@ public class Inventory {
 	private int id, price;
 	public Inventory (String nama, String product, String description, int id, int price) {
 			super ();
-			nama = nama;
-			product = product;
-			description = description;
-			id = id;
-			price = price;
+			this.nama = nama;
+			this.product = product;
+			this.description = description;
+			this.id = id;
+			this.price = price;
 	}
 	
-	public void setId (int id){
-		this.id=id;	
-	}
-	
-	public int getId (){
+	public int getId() {
 		return id;
 	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getPrice() {
+		return price;
 	
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getNama() {
+		return nama;
+	}
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+	public String getProduct() {
+		return product;
 	
 	
 }
