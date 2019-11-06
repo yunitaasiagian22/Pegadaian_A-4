@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Main {
+public class Main_ {
 	static int opsi = 0;
 	static ArrayList<Gadai> gad = new ArrayList();
 	static int idnum = 1;
@@ -49,6 +49,7 @@ public class Main {
 							//gad.setNama(nama);
 							valid1 = true;
 						}
+						else System.out.println("Nama harus 3-15");
 					} while (!valid1);
 					
 					do {
@@ -75,14 +76,12 @@ public class Main {
 						description = input.nextLine();
 						
 						boolean isTwo = cekWords(description);
-
-						if (isTwo == false) {
-							System.out.println("Description should have at least two words!");
-							valid1 = false;
-							// System.out.println("Description: ");
-							// description= input.nextLine();
-						} else
+						//System.out.println(""+isTwo);
+						
+						if (isTwo == true) {
 							valid1 = true;
+						} else
+							System.out.println("Description should have at least two words!");
 							
 					} while (!valid1);
 					
@@ -195,20 +194,17 @@ public class Main {
 
 	private static boolean cekWords(String description) {
 		// TODO Auto-generated method stub
-		int count = 0;
-		while (count < 2) {
-			String[] arrPhrase = description.split(" ");
-			for (int i = 0; i < arrPhrase.length; i++) {
-				if (arrPhrase[i].equals(" ")) {
-				} else {
-					count++;
-
-				}
-			}
-		}
-		if (count >= 2) {
-			return true;
-		}
-		return false;
+		 int count = 1;
+	        for (int i=0;i<=description.length()-1;i++)
+	        {
+	            if (description.charAt(i) == ' ' && description.charAt(i+1)!=' ')
+	            {
+	                count++;
+	            }
+	        }
+	       if (count >=2) {
+	    	   return true;
+	       }
+	       else return false;
 	}
 }
