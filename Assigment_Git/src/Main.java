@@ -16,6 +16,8 @@ public class Main {
 			System.out.println("2. Tebus");
 			System.out.println("3. Tampilkan Inventory");
 			System.out.println("4. Exit");
+			
+			
 
 			// opsi:{
 			Scanner input = new Scanner(System.in);
@@ -93,6 +95,8 @@ public class Main {
 							gad.add(new Gadai(idnum, nama, category, description, price,"Gadai",price,price));
 							//gad.add(new Gadai(setId(), setNama(), setCategory(), setDescription(), setPrice()));
 							idnum++;
+							system("CLS");
+
 						} else {
 							System.out.println("Harga harus kelipatan 10.000!");
 						}
@@ -135,7 +139,8 @@ public class Main {
 						//System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
 						//System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t\t|" + gad1.getPrice()+ "\t\t|" + gad1.getStatus()+ " \t\t|" + gad1.getUtang()+ " \t\t|");
 
-						
+						system("CLS");
+
 					}
 					
 					
@@ -155,6 +160,8 @@ public class Main {
 							System.out.format("|%7s||%12s||%12s||%12s||%12s|\n",gad1.getId(),gad1.getNama(),gad1.getCategory(),gad1.getDescription(),gad1.getUtang());
 							//System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getDescription()+ " \t\t|" + gad1.getUtang()+ "\t|");
 							//System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t\t|" + gad1.getCategory()+ " \t\t\t|" + gad1.getDescription()+ " \t\t|" + gad1.getPrice()+ "\t\t|");
+							system("CLS");
+
 						}
 					}
 					
