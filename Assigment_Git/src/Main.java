@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Main_ {
+public class Main {
 	static int opsi = 0;
 	static ArrayList<Gadai> gad = new ArrayList();
 	static int idnum = 1;
