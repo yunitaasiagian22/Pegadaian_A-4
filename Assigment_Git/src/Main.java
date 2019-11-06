@@ -95,7 +95,7 @@ public class Main {
 							gad.add(new Gadai(idnum, nama, category, description, price,"Gadai",price,price));
 							//gad.add(new Gadai(setId(), setNama(), setCategory(), setDescription(), setPrice()));
 							idnum++;
-							system("CLS");
+							cls();
 
 						} else {
 							System.out.println("Harga harus kelipatan 10.000!");
@@ -138,9 +138,7 @@ public class Main {
 						System.out.format("|%7s||%12s||%12s||%12s||%12s|\n",gad1.getId(),gad1.getCategory(),gad1.getPrice(),gad1.getStatus(),gad1.getUtang());
 						//System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getPrice()+ "\t|" + gad1.getStatus()+ " \t|" + gad1.getUtang()+ " \t|");
 						//System.out.println(gad1.getId() + " \t|" + gad1.getCategory()+ " \t\t\t|" + gad1.getPrice()+ "\t\t|" + gad1.getStatus()+ " \t\t|" + gad1.getUtang()+ " \t\t|");
-
-						system("CLS");
-
+						cls();
 					}
 					
 					
@@ -160,7 +158,7 @@ public class Main {
 							System.out.format("|%7s||%12s||%12s||%12s||%12s|\n",gad1.getId(),gad1.getNama(),gad1.getCategory(),gad1.getDescription(),gad1.getUtang());
 							//System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t|" + gad1.getCategory()+ " \t\t|" + gad1.getDescription()+ " \t\t|" + gad1.getUtang()+ "\t|");
 							//System.out.println(gad1.getId() + " \t|" + gad1.getNama()+ " \t\t|" + gad1.getCategory()+ " \t\t\t|" + gad1.getDescription()+ " \t\t|" + gad1.getPrice()+ "\t\t|");
-							system("CLS");
+							cls();
 
 						}
 					}
@@ -185,6 +183,14 @@ public class Main {
 	private static void gadai() {
 		// TODO Auto-generated method stub
 
+	}
+	
+	public static void cls(){
+		try{
+			new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();		
+		}catch (Exception E){
+			System.out.println(E);
+		}
 	}
 
 	private static boolean cekWords(String description) {
